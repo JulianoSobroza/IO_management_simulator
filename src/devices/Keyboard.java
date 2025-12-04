@@ -6,7 +6,8 @@ public class Keyboard extends Device {
     }
 
     @Override
-    protected long computeInterruptInterval() {
-        return 100; // uma interrupção a cada 100 unidades de tempo
+    protected long computeNextInterruptTime(long currentTime) {
+        // Gera uma interrupção aleatória entre 80 e 120 unidades de tempo a partir de agora
+        return currentTime + 80 + random.nextInt(41);
     }
 }

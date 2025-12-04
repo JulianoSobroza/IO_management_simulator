@@ -6,7 +6,8 @@ public class SATA extends Device {
     }
 
     @Override
-    protected long computeInterruptInterval() {
-        return 5; // muito frequente
+    protected long computeNextInterruptTime(long currentTime) {
+        // Gera uma interrupção aleatória entre 3 e 7 unidades de tempo a partir de agora
+        return currentTime + 3 + random.nextInt(5);
     }
 }

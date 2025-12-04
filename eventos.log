@@ -1,0 +1,238 @@
+[32m[INFO] [Tempo 0] Processo principal em execução. { PC=1, Estado='executando' }[0m
+[32m[INFO] [Tempo 1] Processo principal em execução. { PC=2, Estado='executando' }[0m
+[32m[INFO] [Tempo 2] Processo principal em execução. { PC=3, Estado='executando' }[0m
+[32m[INFO] [Tempo 3] Processo principal em execução. { PC=4, Estado='executando' }[0m
+[32m[INFO] [Tempo 4] Processo principal em execução. { PC=5, Estado='executando' }[0m
+[32m[INFO] [Tempo 5] Processo principal em execução. { PC=6, Estado='executando' }[0m
+[33m[WARN] [Tempo 5] Interrupção gerada: SATA  (LOW)[0m
+[31m[INTERRUPT] >>> INICIANDO TRATAMENTO DE INTERRUPÇÃO <<<[0m
+[36m[SYSTEM] [Tempo 5] Interrupção de SATA  detectada.[0m
+[36m[SYSTEM] Estado do processo ANTES de salvar: { PC=6, Estado='executando' }[0m
+[36m[SYSTEM] Armazenando contexto na pilha...[0m
+[36m[SYSTEM] Contexto salvo: { PC=6, Estado='interrompido' }[0m
+[31m[INTERRUPT] CPU desviada para rotina de tratamento de: SATA  (Prioridade: LOW)[0m
+[36m[SYSTEM] Interrupção tratada. Restaurando contexto...[0m
+[36m[SYSTEM] Contexto restaurado: { PC=6, Estado='executando' }[0m
+[31m[INTERRUPT] >>> FIM DO TRATAMENTO <<<[0m
+[32m[INFO] [Tempo 9] Processo principal em execução. { PC=7, Estado='executando' }[0m
+[33m[WARN] [Tempo 9] Interrupção gerada: SATA  (LOW)[0m
+[31m[INTERRUPT] >>> INICIANDO TRATAMENTO DE INTERRUPÇÃO <<<[0m
+[36m[SYSTEM] [Tempo 9] Interrupção de SATA  detectada.[0m
+[36m[SYSTEM] Estado do processo ANTES de salvar: { PC=7, Estado='executando' }[0m
+[36m[SYSTEM] Armazenando contexto na pilha...[0m
+[36m[SYSTEM] Contexto salvo: { PC=7, Estado='interrompido' }[0m
+[31m[INTERRUPT] CPU desviada para rotina de tratamento de: SATA  (Prioridade: LOW)[0m
+[36m[SYSTEM] Interrupção tratada. Restaurando contexto...[0m
+[36m[SYSTEM] Contexto restaurado: { PC=7, Estado='executando' }[0m
+[31m[INTERRUPT] >>> FIM DO TRATAMENTO <<<[0m
+[32m[INFO] [Tempo 13] Processo principal em execução. { PC=8, Estado='executando' }[0m
+[32m[INFO] [Tempo 14] Processo principal em execução. { PC=9, Estado='executando' }[0m
+[33m[WARN] [Tempo 14] Interrupção gerada: SATA  (LOW)[0m
+[31m[INTERRUPT] >>> INICIANDO TRATAMENTO DE INTERRUPÇÃO <<<[0m
+[36m[SYSTEM] [Tempo 14] Interrupção de SATA  detectada.[0m
+[36m[SYSTEM] Estado do processo ANTES de salvar: { PC=9, Estado='executando' }[0m
+[36m[SYSTEM] Armazenando contexto na pilha...[0m
+[36m[SYSTEM] Contexto salvo: { PC=9, Estado='interrompido' }[0m
+[31m[INTERRUPT] CPU desviada para rotina de tratamento de: SATA  (Prioridade: LOW)[0m
+[36m[SYSTEM] Interrupção tratada. Restaurando contexto...[0m
+[36m[SYSTEM] Contexto restaurado: { PC=9, Estado='executando' }[0m
+[31m[INTERRUPT] >>> FIM DO TRATAMENTO <<<[0m
+[32m[INFO] [Tempo 18] Processo principal em execução. { PC=10, Estado='executando' }[0m
+[33m[WARN] [Tempo 18] Interrupção gerada: SATA  (LOW)[0m
+[31m[INTERRUPT] >>> INICIANDO TRATAMENTO DE INTERRUPÇÃO <<<[0m
+[36m[SYSTEM] [Tempo 18] Interrupção de SATA  detectada.[0m
+[36m[SYSTEM] Estado do processo ANTES de salvar: { PC=10, Estado='executando' }[0m
+[36m[SYSTEM] Armazenando contexto na pilha...[0m
+[36m[SYSTEM] Contexto salvo: { PC=10, Estado='interrompido' }[0m
+[31m[INTERRUPT] CPU desviada para rotina de tratamento de: SATA  (Prioridade: LOW)[0m
+[33m[WARN] [Tempo 21] Interrupção gerada: SATA  (LOW)[0m
+[36m[SYSTEM] Interrupção tratada. Restaurando contexto...[0m
+[36m[SYSTEM] Contexto restaurado: { PC=10, Estado='executando' }[0m
+[31m[INTERRUPT] >>> FIM DO TRATAMENTO <<<[0m
+[31m[INTERRUPT] >>> INICIANDO TRATAMENTO DE INTERRUPÇÃO <<<[0m
+[36m[SYSTEM] [Tempo 21] Interrupção de SATA  detectada.[0m
+[36m[SYSTEM] Estado do processo ANTES de salvar: { PC=10, Estado='executando' }[0m
+[36m[SYSTEM] Armazenando contexto na pilha...[0m
+[36m[SYSTEM] Contexto salvo: { PC=10, Estado='interrompido' }[0m
+[31m[INTERRUPT] CPU desviada para rotina de tratamento de: SATA  (Prioridade: LOW)[0m
+[36m[SYSTEM] Interrupção tratada. Restaurando contexto...[0m
+[36m[SYSTEM] Contexto restaurado: { PC=10, Estado='executando' }[0m
+[31m[INTERRUPT] >>> FIM DO TRATAMENTO <<<[0m
+[32m[INFO] [Tempo 25] Processo principal em execução. { PC=11, Estado='executando' }[0m
+[32m[INFO] [Tempo 26] Processo principal em execução. { PC=12, Estado='executando' }[0m
+[33m[WARN] [Tempo 26] Interrupção gerada: SATA  (LOW)[0m
+[31m[INTERRUPT] >>> INICIANDO TRATAMENTO DE INTERRUPÇÃO <<<[0m
+[36m[SYSTEM] [Tempo 26] Interrupção de SATA  detectada.[0m
+[36m[SYSTEM] Estado do processo ANTES de salvar: { PC=12, Estado='executando' }[0m
+[36m[SYSTEM] Armazenando contexto na pilha...[0m
+[36m[SYSTEM] Contexto salvo: { PC=12, Estado='interrompido' }[0m
+[31m[INTERRUPT] CPU desviada para rotina de tratamento de: SATA  (Prioridade: LOW)[0m
+[36m[SYSTEM] Interrupção tratada. Restaurando contexto...[0m
+[36m[SYSTEM] Contexto restaurado: { PC=12, Estado='executando' }[0m
+[31m[INTERRUPT] >>> FIM DO TRATAMENTO <<<[0m
+[32m[INFO] [Tempo 30] Processo principal em execução. { PC=13, Estado='executando' }[0m
+[32m[INFO] [Tempo 31] Processo principal em execução. { PC=14, Estado='executando' }[0m
+[33m[WARN] [Tempo 31] Interrupção gerada: SATA  (LOW)[0m
+[31m[INTERRUPT] >>> INICIANDO TRATAMENTO DE INTERRUPÇÃO <<<[0m
+[36m[SYSTEM] [Tempo 31] Interrupção de SATA  detectada.[0m
+[36m[SYSTEM] Estado do processo ANTES de salvar: { PC=14, Estado='executando' }[0m
+[36m[SYSTEM] Armazenando contexto na pilha...[0m
+[36m[SYSTEM] Contexto salvo: { PC=14, Estado='interrompido' }[0m
+[31m[INTERRUPT] CPU desviada para rotina de tratamento de: SATA  (Prioridade: LOW)[0m
+[36m[SYSTEM] Interrupção tratada. Restaurando contexto...[0m
+[36m[SYSTEM] Contexto restaurado: { PC=14, Estado='executando' }[0m
+[31m[INTERRUPT] >>> FIM DO TRATAMENTO <<<[0m
+[32m[INFO] [Tempo 35] Processo principal em execução. { PC=15, Estado='executando' }[0m
+[32m[INFO] [Tempo 36] Processo principal em execução. { PC=16, Estado='executando' }[0m
+[33m[WARN] [Tempo 36] Interrupção gerada: SATA  (LOW)[0m
+[31m[INTERRUPT] >>> INICIANDO TRATAMENTO DE INTERRUPÇÃO <<<[0m
+[36m[SYSTEM] [Tempo 36] Interrupção de SATA  detectada.[0m
+[36m[SYSTEM] Estado do processo ANTES de salvar: { PC=16, Estado='executando' }[0m
+[36m[SYSTEM] Armazenando contexto na pilha...[0m
+[36m[SYSTEM] Contexto salvo: { PC=16, Estado='interrompido' }[0m
+[31m[INTERRUPT] CPU desviada para rotina de tratamento de: SATA  (Prioridade: LOW)[0m
+[36m[SYSTEM] Interrupção tratada. Restaurando contexto...[0m
+[36m[SYSTEM] Contexto restaurado: { PC=16, Estado='executando' }[0m
+[31m[INTERRUPT] >>> FIM DO TRATAMENTO <<<[0m
+[32m[INFO] [Tempo 40] Processo principal em execução. { PC=17, Estado='executando' }[0m
+[33m[WARN] [Tempo 40] Interrupção gerada: SATA  (LOW)[0m
+[31m[INTERRUPT] >>> INICIANDO TRATAMENTO DE INTERRUPÇÃO <<<[0m
+[36m[SYSTEM] [Tempo 40] Interrupção de SATA  detectada.[0m
+[36m[SYSTEM] Estado do processo ANTES de salvar: { PC=17, Estado='executando' }[0m
+[36m[SYSTEM] Armazenando contexto na pilha...[0m
+[36m[SYSTEM] Contexto salvo: { PC=17, Estado='interrompido' }[0m
+[31m[INTERRUPT] CPU desviada para rotina de tratamento de: SATA  (Prioridade: LOW)[0m
+[36m[SYSTEM] Interrupção tratada. Restaurando contexto...[0m
+[36m[SYSTEM] Contexto restaurado: { PC=17, Estado='executando' }[0m
+[31m[INTERRUPT] >>> FIM DO TRATAMENTO <<<[0m
+[32m[INFO] [Tempo 44] Processo principal em execução. { PC=18, Estado='executando' }[0m
+[33m[WARN] [Tempo 44] Interrupção gerada: SATA  (LOW)[0m
+[31m[INTERRUPT] >>> INICIANDO TRATAMENTO DE INTERRUPÇÃO <<<[0m
+[36m[SYSTEM] [Tempo 44] Interrupção de SATA  detectada.[0m
+[36m[SYSTEM] Estado do processo ANTES de salvar: { PC=18, Estado='executando' }[0m
+[36m[SYSTEM] Armazenando contexto na pilha...[0m
+[36m[SYSTEM] Contexto salvo: { PC=18, Estado='interrompido' }[0m
+[31m[INTERRUPT] CPU desviada para rotina de tratamento de: SATA  (Prioridade: LOW)[0m
+[36m[SYSTEM] Interrupção tratada. Restaurando contexto...[0m
+[36m[SYSTEM] Contexto restaurado: { PC=18, Estado='executando' }[0m
+[31m[INTERRUPT] >>> FIM DO TRATAMENTO <<<[0m
+[32m[INFO] [Tempo 48] Processo principal em execução. { PC=19, Estado='executando' }[0m
+[32m[INFO] [Tempo 49] Processo principal em execução. { PC=20, Estado='executando' }[0m
+[32m[INFO] [Tempo 50] Processo principal em execução. { PC=21, Estado='executando' }[0m
+[33m[WARN] [Tempo 50] Interrupção gerada: SATA  (LOW)[0m
+[31m[INTERRUPT] >>> INICIANDO TRATAMENTO DE INTERRUPÇÃO <<<[0m
+[36m[SYSTEM] [Tempo 50] Interrupção de SATA  detectada.[0m
+[36m[SYSTEM] Estado do processo ANTES de salvar: { PC=21, Estado='executando' }[0m
+[36m[SYSTEM] Armazenando contexto na pilha...[0m
+[36m[SYSTEM] Contexto salvo: { PC=21, Estado='interrompido' }[0m
+[31m[INTERRUPT] CPU desviada para rotina de tratamento de: SATA  (Prioridade: LOW)[0m
+[36m[SYSTEM] Interrupção tratada. Restaurando contexto...[0m
+[36m[SYSTEM] Contexto restaurado: { PC=21, Estado='executando' }[0m
+[31m[INTERRUPT] >>> FIM DO TRATAMENTO <<<[0m
+[32m[INFO] [Tempo 0] Processo principal em execução. { PC=1, Estado='executando' }[0m
+[32m[INFO] [Tempo 1] Processo principal em execução. { PC=2, Estado='executando' }[0m
+[32m[INFO] [Tempo 2] Processo principal em execução. { PC=3, Estado='executando' }[0m
+[32m[INFO] [Tempo 3] Processo principal em execução. { PC=4, Estado='executando' }[0m
+[32m[INFO] [Tempo 4] Processo principal em execução. { PC=5, Estado='executando' }[0m
+[32m[INFO] [Tempo 5] Processo principal em execução. { PC=6, Estado='executando' }[0m
+[32m[INFO] [Tempo 6] Processo principal em execução. { PC=7, Estado='executando' }[0m
+[32m[INFO] [Tempo 7] Processo principal em execução. { PC=8, Estado='executando' }[0m
+[33m[WARN] [Tempo 7] Interrupção gerada: SATA  (LOW)[0m
+[31m[INTERRUPT] >>> INICIANDO TRATAMENTO DE INTERRUPÇÃO <<<[0m
+[36m[SYSTEM] [Tempo 7] Interrupção de SATA  detectada.[0m
+[36m[SYSTEM] Estado do processo ANTES de salvar: { PC=8, Estado='executando' }[0m
+[36m[SYSTEM] Armazenando contexto na pilha...[0m
+[36m[SYSTEM] Contexto salvo: { PC=8, Estado='interrompido' }[0m
+[31m[INTERRUPT] CPU desviada para rotina de tratamento de: SATA  (Prioridade: LOW)[0m
+[33m[WARN] [Tempo 10] Interrupção gerada: SATA  (LOW)[0m
+[36m[SYSTEM] Interrupção tratada. Restaurando contexto...[0m
+[36m[SYSTEM] Contexto restaurado: { PC=8, Estado='executando' }[0m
+[31m[INTERRUPT] >>> FIM DO TRATAMENTO <<<[0m
+[31m[INTERRUPT] >>> INICIANDO TRATAMENTO DE INTERRUPÇÃO <<<[0m
+[36m[SYSTEM] [Tempo 10] Interrupção de SATA  detectada.[0m
+[36m[SYSTEM] Estado do processo ANTES de salvar: { PC=8, Estado='executando' }[0m
+[36m[SYSTEM] Armazenando contexto na pilha...[0m
+[36m[SYSTEM] Contexto salvo: { PC=8, Estado='interrompido' }[0m
+[31m[INTERRUPT] CPU desviada para rotina de tratamento de: SATA  (Prioridade: LOW)[0m
+[33m[WARN] [Tempo 13] Interrupção gerada: SATA  (LOW)[0m
+[36m[SYSTEM] Interrupção tratada. Restaurando contexto...[0m
+[36m[SYSTEM] Contexto restaurado: { PC=8, Estado='executando' }[0m
+[31m[INTERRUPT] >>> FIM DO TRATAMENTO <<<[0m
+[31m[INTERRUPT] >>> INICIANDO TRATAMENTO DE INTERRUPÇÃO <<<[0m
+[36m[SYSTEM] [Tempo 13] Interrupção de SATA  detectada.[0m
+[36m[SYSTEM] Estado do processo ANTES de salvar: { PC=8, Estado='executando' }[0m
+[36m[SYSTEM] Armazenando contexto na pilha...[0m
+[36m[SYSTEM] Contexto salvo: { PC=8, Estado='interrompido' }[0m
+[31m[INTERRUPT] CPU desviada para rotina de tratamento de: SATA  (Prioridade: LOW)[0m
+[33m[WARN] [Tempo 16] Interrupção gerada: SATA  (LOW)[0m
+[36m[SYSTEM] Interrupção tratada. Restaurando contexto...[0m
+[36m[SYSTEM] Contexto restaurado: { PC=8, Estado='executando' }[0m
+[31m[INTERRUPT] >>> FIM DO TRATAMENTO <<<[0m
+[31m[INTERRUPT] >>> INICIANDO TRATAMENTO DE INTERRUPÇÃO <<<[0m
+[36m[SYSTEM] [Tempo 16] Interrupção de SATA  detectada.[0m
+[36m[SYSTEM] Estado do processo ANTES de salvar: { PC=8, Estado='executando' }[0m
+[36m[SYSTEM] Armazenando contexto na pilha...[0m
+[36m[SYSTEM] Contexto salvo: { PC=8, Estado='interrompido' }[0m
+[31m[INTERRUPT] CPU desviada para rotina de tratamento de: SATA  (Prioridade: LOW)[0m
+[36m[SYSTEM] Interrupção tratada. Restaurando contexto...[0m
+[36m[SYSTEM] Contexto restaurado: { PC=8, Estado='executando' }[0m
+[31m[INTERRUPT] >>> FIM DO TRATAMENTO <<<[0m
+[32m[INFO] [Tempo 20] Processo principal em execução. { PC=9, Estado='executando' }[0m
+[32m[INFO] [Tempo 21] Processo principal em execução. { PC=10, Estado='executando' }[0m
+[32m[INFO] [Tempo 22] Processo principal em execução. { PC=11, Estado='executando' }[0m
+[32m[INFO] [Tempo 23] Processo principal em execução. { PC=12, Estado='executando' }[0m
+[33m[WARN] [Tempo 23] Interrupção gerada: SATA  (LOW)[0m
+[31m[INTERRUPT] >>> INICIANDO TRATAMENTO DE INTERRUPÇÃO <<<[0m
+[36m[SYSTEM] [Tempo 23] Interrupção de SATA  detectada.[0m
+[36m[SYSTEM] Estado do processo ANTES de salvar: { PC=12, Estado='executando' }[0m
+[36m[SYSTEM] Armazenando contexto na pilha...[0m
+[36m[SYSTEM] Contexto salvo: { PC=12, Estado='interrompido' }[0m
+[31m[INTERRUPT] CPU desviada para rotina de tratamento de: SATA  (Prioridade: LOW)[0m
+[36m[SYSTEM] Interrupção tratada. Restaurando contexto...[0m
+[36m[SYSTEM] Contexto restaurado: { PC=12, Estado='executando' }[0m
+[31m[INTERRUPT] >>> FIM DO TRATAMENTO <<<[0m
+[32m[INFO] [Tempo 27] Processo principal em execução. { PC=13, Estado='executando' }[0m
+[32m[INFO] [Tempo 28] Processo principal em execução. { PC=14, Estado='executando' }[0m
+[32m[INFO] [Tempo 29] Processo principal em execução. { PC=15, Estado='executando' }[0m
+[32m[INFO] [Tempo 30] Processo principal em execução. { PC=16, Estado='executando' }[0m
+[33m[WARN] [Tempo 30] Interrupção gerada: SATA  (LOW)[0m
+[31m[INTERRUPT] >>> INICIANDO TRATAMENTO DE INTERRUPÇÃO <<<[0m
+[36m[SYSTEM] [Tempo 30] Interrupção de SATA  detectada.[0m
+[36m[SYSTEM] Estado do processo ANTES de salvar: { PC=16, Estado='executando' }[0m
+[36m[SYSTEM] Armazenando contexto na pilha...[0m
+[36m[SYSTEM] Contexto salvo: { PC=16, Estado='interrompido' }[0m
+[31m[INTERRUPT] CPU desviada para rotina de tratamento de: SATA  (Prioridade: LOW)[0m
+[36m[SYSTEM] Interrupção tratada. Restaurando contexto...[0m
+[36m[SYSTEM] Contexto restaurado: { PC=16, Estado='executando' }[0m
+[31m[INTERRUPT] >>> FIM DO TRATAMENTO <<<[0m
+[32m[INFO] [Tempo 34] Processo principal em execução. { PC=17, Estado='executando' }[0m
+[32m[INFO] [Tempo 35] Processo principal em execução. { PC=18, Estado='executando' }[0m
+[32m[INFO] [Tempo 36] Processo principal em execução. { PC=19, Estado='executando' }[0m
+[32m[INFO] [Tempo 37] Processo principal em execução. { PC=20, Estado='executando' }[0m
+[33m[WARN] [Tempo 37] Interrupção gerada: SATA  (LOW)[0m
+[31m[INTERRUPT] >>> INICIANDO TRATAMENTO DE INTERRUPÇÃO <<<[0m
+[36m[SYSTEM] [Tempo 37] Interrupção de SATA  detectada.[0m
+[36m[SYSTEM] Estado do processo ANTES de salvar: { PC=20, Estado='executando' }[0m
+[36m[SYSTEM] Armazenando contexto na pilha...[0m
+[36m[SYSTEM] Contexto salvo: { PC=20, Estado='interrompido' }[0m
+[31m[INTERRUPT] CPU desviada para rotina de tratamento de: SATA  (Prioridade: LOW)[0m
+[36m[SYSTEM] Interrupção tratada. Restaurando contexto...[0m
+[36m[SYSTEM] Contexto restaurado: { PC=20, Estado='executando' }[0m
+[31m[INTERRUPT] >>> FIM DO TRATAMENTO <<<[0m
+[32m[INFO] [Tempo 41] Processo principal em execução. { PC=21, Estado='executando' }[0m
+[32m[INFO] [Tempo 42] Processo principal em execução. { PC=22, Estado='executando' }[0m
+[32m[INFO] [Tempo 43] Processo principal em execução. { PC=23, Estado='executando' }[0m
+[32m[INFO] [Tempo 44] Processo principal em execução. { PC=24, Estado='executando' }[0m
+[33m[WARN] [Tempo 44] Interrupção gerada: SATA  (LOW)[0m
+[31m[INTERRUPT] >>> INICIANDO TRATAMENTO DE INTERRUPÇÃO <<<[0m
+[36m[SYSTEM] [Tempo 44] Interrupção de SATA  detectada.[0m
+[36m[SYSTEM] Estado do processo ANTES de salvar: { PC=24, Estado='executando' }[0m
+[36m[SYSTEM] Armazenando contexto na pilha...[0m
+[36m[SYSTEM] Contexto salvo: { PC=24, Estado='interrompido' }[0m
+[31m[INTERRUPT] CPU desviada para rotina de tratamento de: SATA  (Prioridade: LOW)[0m
+[36m[SYSTEM] Interrupção tratada. Restaurando contexto...[0m
+[36m[SYSTEM] Contexto restaurado: { PC=24, Estado='executando' }[0m
+[31m[INTERRUPT] >>> FIM DO TRATAMENTO <<<[0m
+[32m[INFO] [Tempo 48] Processo principal em execução. { PC=25, Estado='executando' }[0m
+[32m[INFO] [Tempo 49] Processo principal em execução. { PC=26, Estado='executando' }[0m
+[32m[INFO] [Tempo 50] Processo principal em execução. { PC=27, Estado='executando' }[0m

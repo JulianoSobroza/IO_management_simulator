@@ -3,31 +3,32 @@ package devices;
 import interrupts.Interrupt;
 
 public abstract class Device {
-
     private String name;
     private Priority priority;
     private long transferRate;
     private long lastInterruptTime;
+    private long nextInterruptTime;
+    protected java.util.Random random = new java.util.Random();
 
     public Device(String name, Priority priority, long transferRate) {
         this.name = name;
         this.priority = priority;
         this.transferRate = transferRate;
         this.lastInterruptTime = 0;
+        this.nextInterruptTime = computeNextInterruptTime(0);
     }
 
-    // Lógica extremamente simples baseada no tempo
     public boolean shouldInterrupt(long currentTime) {
-        long interval = computeInterruptInterval();
-        if (currentTime - lastInterruptTime >= interval) {
+        if (currentTime >= nextInterruptTime) {
             lastInterruptTime = currentTime;
+            nextInterruptTime = computeNextInterruptTime(currentTime);
             return true;
         }
         return false;
     }
 
-    // Cada tipo de dispositivo define seu próprio ritmo
-    protected abstract long computeInterruptInterval();
+    // Cada dispositivo define quando será a próxima interrupção
+    protected abstract long computeNextInterruptTime(long currentTime);
 
 
     public Interrupt generateInterrupt(long time) {

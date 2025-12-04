@@ -12,4 +12,9 @@ public class Contexto {
 
     public int getPc() { return pc; }
     public String getEstado() { return estado; }
+
+    @Override
+    public String toString() {
+        return String.format("{ PC=%d, Estado='%s' }", pc, estado);
+    }
 }
