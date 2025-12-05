@@ -7,27 +7,30 @@ import java.util.ArrayList;
 import java.util.List;
 import log.Logger;
 
+/**
+ * O coração da simulação.
+ * Funciona como o loop principal do Sistema Operacional.
+ */
 public class Simulador {
 
-    private InterruptController controller = new InterruptController();
-    private Logger logger = new Logger("log.txt");
-    private Processo processo = new Processo();
-    private final List<Device> devices = new ArrayList<>();
+    private InterruptController controlador;
+    private Logger logger;
+    private Processo processo;
+    private final List<Device> dispositivos = new ArrayList<>();
 
     private long tempo = 0;
 
-    public Simulador(InterruptController controller, Logger logger, Processo processo) {
-        this.controller = controller;
+    public Simulador(InterruptController controlador, Logger logger, Processo processo) {
+        this.controlador = controlador;
         this.logger = logger;
         this.processo = processo;
     }
 
-
-    public void addDevice(Device device) {
-        devices.add(device);
+    public void adicionarDispositivo(Device dispositivo) {
+        dispositivos.add(dispositivo);
     }
 
-    public void run(long tempoMaximo) {
+    public void executar(long tempoMaximo) {
         for (tempo = 0; tempo <= tempoMaximo; tempo++) {
 
             try {
@@ -44,54 +47,40 @@ public class Simulador {
             verificarDispositivos(tempo);
 
             // 3. Se houver interrupções, tratar TODAS antes de voltar ao processo
-            while (controller.hasInterrupts()) {
+            while (controlador.temInterrupcoes()) {
                 tratarInterrupcao();
             }
         }
-        logger.close();
     }
 
-    private void verificarDispositivos(long currentTime) {
-        for (Device dev : devices) {
-            if (dev.shouldInterrupt(currentTime)) {
-                Interrupt inter = dev.generateInterrupt(currentTime);
-                controller.requestInterrupt(inter);
-
-                logger.logWarning("[Tempo " + currentTime + "] Interrupção gerada: " +
-                           dev.getName() + " (" + dev.getPriority() + ")");
+    private void verificarDispositivos(long tempoAtual) {
+        for (Device d : dispositivos) {
+            if (d.deveInterromper(tempoAtual)) {
+                logger.logAviso("Dispositivo " + d.getNome() + " gerou interrupção!");
+                controlador.solicitarInterrupcao(d.gerarInterrupcao(tempoAtual));
             }
         }
     }
 
     private void tratarInterrupcao() {
-        Interrupt inter = controller.nextInterrupt();
-
-        logger.logInterrupt(">>> INICIANDO TRATAMENTO DE INTERRUPÇÃO <<<");
-        logger.logSystem("[Tempo " + tempo + "] Interrupção de " + inter.getDevice().getName() + " detectada.");
-        logger.logSystem("Estado do processo ANTES de salvar: " + processo.getContexto());
-        
-        logger.logSystem("Armazenando contexto na pilha...");
-        processo.salvarContexto();
-        logger.logSystem("Contexto salvo: " + processo.getContexto());
-
-        logger.logInterrupt("CPU desviada para rotina de tratamento de: " +
-                   inter.getDevice().getName() + " (Prioridade: " + inter.getPriority() + ")");
-
-        // Simula tempo de tratamento (3 unidades de tempo)
-        // Durante o tratamento, outros dispositivos podem gerar interrupções (que entram na fila)
-        for (int i = 0; i < 3; i++) {
-            try {
-                Thread.sleep(300); 
-            } catch (InterruptedException e) { e.printStackTrace(); }
+        Interrupt interrupcao = controlador.proximaInterrupcao();
+        if (interrupcao != null) {
+            logger.logSistema("Tratando interrupção de: " + interrupcao.getDispositivo().getNome() + 
+                              " (Prioridade: " + interrupcao.getPrioridade() + ")");
             
-            tempo++; // O tempo passa enquanto a CPU trata a interrupção
-            verificarDispositivos(tempo); // Verifica se chegaram novas interrupções durante o tratamento
-        }
+            // Salva contexto
+            processo.salvarContexto();
+            logger.logSistema("Contexto salvo: " + processo.getContexto());
 
-        logger.logSystem("Interrupção tratada. Restaurando contexto...");
-        processo.restaurarContexto();
-        
-        logger.logSystem("Contexto restaurado: " + processo.getContexto());
-        logger.logInterrupt(">>> FIM DO TRATAMENTO <<<");
+            // Simula o tratamento da interrupção (ISR)
+            logger.logInterrupcao("Executando rotina de tratamento para " + interrupcao.getDispositivo().getNome() + "...");
+            try {
+                Thread.sleep(1000); // Simula tempo de processamento da interrupção
+            } catch (InterruptedException e) { }
+
+            // Restaura contexto
+            processo.restaurarContexto();
+            logger.logSistema("Contexto restaurado: " + processo.getContexto());
+        }
     }
 }

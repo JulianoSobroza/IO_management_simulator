@@ -1,4 +1,3 @@
-
 import devices.Keyboard;
 import devices.Printer;
 import devices.SATA;
@@ -45,22 +44,22 @@ public class Main {
             }
 
             // Cria os componentes (reiniciando o estado a cada simulação)
-            InterruptController controller = new InterruptController();
+            InterruptController controlador = new InterruptController();
             Logger logger = new Logger("eventos.log");
             Processo processo = new Processo();
-            Simulador simulador = new Simulador(controller, logger, processo);
+            Simulador simulador = new Simulador(controlador, logger, processo);
 
             if (opcao == 1) {
                 System.out.println("\n>>> Iniciando Simulação Padrão (50 unidades de tempo) <<<");
                 System.out.println("Dispositivos geram interrupções em intervalos aleatórios.");
                 
                 // Registra os dispositivos com comportamento padrão
-                simulador.addDevice(new Keyboard());
-                simulador.addDevice(new Printer());
-                simulador.addDevice(new SATA());
+                simulador.adicionarDispositivo(new Keyboard());
+                simulador.adicionarDispositivo(new Printer());
+                simulador.adicionarDispositivo(new SATA());
 
                 // Inicia a simulação
-                simulador.run(50);
+                simulador.executar(50);
 
             } else if (opcao == 2) {
                 System.out.println("\n>>> Iniciando Teste de Prioridade (20 unidades de tempo) <<<");
@@ -68,25 +67,25 @@ public class Main {
                 System.out.println("Resultado esperado: O Teclado deve ser atendido antes do SATA.");
 
                 // Registra Teclado modificado para interromper no tempo 10
-                simulador.addDevice(new Keyboard() {
+                simulador.adicionarDispositivo(new Keyboard() {
                     @Override
-                    protected long computeNextInterruptTime(long currentTime) {
-                        if (currentTime == 0) return 10; // Primeira interrupção no tempo 10
-                        return currentTime + 1000; // Próximas muito distantes para não atrapalhar
+                    protected long calcularProximaInterrupcao(long tempoAtual) {
+                        if (tempoAtual == 0) return 10; // Primeira interrupção no tempo 10
+                        return tempoAtual + 1000; // Próximas muito distantes para não atrapalhar
                     }
                 });
 
                 // Registra SATA modificado para interromper TAMBÉM no tempo 10
-                simulador.addDevice(new SATA() {
+                simulador.adicionarDispositivo(new SATA() {
                     @Override
-                    protected long computeNextInterruptTime(long currentTime) {
-                        if (currentTime == 0) return 10; // Primeira interrupção no tempo 10
-                        return currentTime + 1000; 
+                    protected long calcularProximaInterrupcao(long tempoAtual) {
+                        if (tempoAtual == 0) return 10; // Primeira interrupção no tempo 10
+                        return tempoAtual + 1000; 
                     }
                 });
 
                 // Inicia a simulação
-                simulador.run(20);
+                simulador.executar(20);
             } else {
                 if (opcao != -1) System.out.println("Opção inválida.");
             }

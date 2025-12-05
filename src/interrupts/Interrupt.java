@@ -2,18 +2,22 @@ package interrupts;
 import devices.Device;
 import devices.Priority;
 
+/**
+ * Representa um evento de interrupção gerado por um dispositivo.
+ * Contém quem gerou, a prioridade e quando aconteceu.
+ */
 public class Interrupt {
-    private final Device device;
-    private final Priority priority;
-    private final long timestamp;
+    private final Device dispositivo;
+    private final Priority prioridade;
+    private final long tempo;
 
-    public Interrupt(Device device, Priority priority, long timestamp) {
-        this.device = device;
-        this.priority = priority;
-        this.timestamp = timestamp;
+    public Interrupt(Device dispositivo, Priority prioridade, long tempo) {
+        this.dispositivo = dispositivo;
+        this.prioridade = prioridade;
+        this.tempo = tempo;
     }
 
-    public Device getDevice() { return device; }
-    public Priority getPriority() { return priority; }
-    public long getTimestamp() { return timestamp; }
+    public Device getDispositivo() { return dispositivo; }
+    public Priority getPrioridade() { return prioridade; }
+    public long getTempo() { return tempo; }
 }

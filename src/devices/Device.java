@@ -2,70 +2,58 @@ package devices;
 
 import interrupts.Interrupt;
 
+/**
+ * Classe abstrata que representa um dispositivo de hardware genérico.
+ * Todos os dispositivos (Teclado, Mouse, etc.) herdam daqui.
+ */
 public abstract class Device {
-    private String name;
-    private Priority priority;
-    private long transferRate;
-    private long lastInterruptTime;
-    private long nextInterruptTime;
-    protected java.util.Random random = new java.util.Random();
+    private String nome;
+    private Priority prioridade;
+    private long taxaTransferencia; // Não usado muito na simulação, mas tá aí
+    private long ultimoTempoInterrupcao;
+    private long proximoTempoInterrupcao;
+    protected java.util.Random aleatorio = new java.util.Random();
 
-    public Device(String name, Priority priority, long transferRate) {
-        this.name = name;
-        this.priority = priority;
-        this.transferRate = transferRate;
-        this.lastInterruptTime = 0;
-        this.nextInterruptTime = computeNextInterruptTime(0);
+    public Device(String nome, Priority prioridade, long taxaTransferencia) {
+        this.nome = nome;
+        this.prioridade = prioridade;
+        this.taxaTransferencia = taxaTransferencia;
+        this.ultimoTempoInterrupcao = 0;
+        this.proximoTempoInterrupcao = calcularProximaInterrupcao(0);
     }
 
-    public boolean shouldInterrupt(long currentTime) {
-        if (currentTime >= nextInterruptTime) {
-            lastInterruptTime = currentTime;
-            nextInterruptTime = computeNextInterruptTime(currentTime);
+    /**
+     * Verifica se o dispositivo deve gerar uma interrupção no tempo atual.
+     */
+    public boolean deveInterromper(long tempoAtual) {
+        if (tempoAtual >= proximoTempoInterrupcao) {
+            ultimoTempoInterrupcao = tempoAtual;
+            proximoTempoInterrupcao = calcularProximaInterrupcao(tempoAtual);
             return true;
         }
         return false;
     }
 
     // Cada dispositivo define quando será a próxima interrupção
-    protected abstract long computeNextInterruptTime(long currentTime);
+    protected abstract long calcularProximaInterrupcao(long tempoAtual);
 
-
-    public Interrupt generateInterrupt(long time) {
-        return new Interrupt(this, priority, time);
+    /**
+     * Cria um objeto de interrupção para ser enviado ao controlador.
+     */
+    public Interrupt gerarInterrupcao(long tempo) {
+        return new Interrupt(this, prioridade, tempo);
     }
-
 
     // Abaixo somente os Getters e Setters
-    public String getName() {
-        return name;
+    public String getNome() {
+        return nome;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public Priority getPriority() {
-        return priority;
-    }
-
-    public void setPriority(Priority priority) {
-        this.priority = priority;
-    }
-
-    public long getTransferRate() {
-        return transferRate;
-    }
-
-    public void setTransferRate(long transferRate) {
-        this.transferRate = transferRate;
-    }
-
-    public long getLastInterruptTime() {
-        return lastInterruptTime;
-    }
-
-    public void setLastInterruptTime(long lastInterruptTime) {
-        this.lastInterruptTime = lastInterruptTime;
+    public Priority getPrioridade() {
+        return prioridade;
     }
 }

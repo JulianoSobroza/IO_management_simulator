@@ -1,11 +1,9 @@
 # Simulador de Gerenciamento de E/S com Interrupções
 
-Este projeto é uma simulação didática de como um Sistema Operacional gerencia dispositivos de Entrada e Saída (E/S) utilizando o mecanismo de interrupções.
-
-## 🎯 Objetivo
+##  Objetivo
 Demonstrar o fluxo de execução de um processo sendo interrompido por dispositivos de hardware (Teclado, Disco, Impressora), o salvamento de contexto, o tratamento da interrupção e a restauração do contexto original.
 
-## 📂 Estrutura do Projeto
+## Estrutura do Projeto
 
 O código está organizado nos seguintes pacotes:
 
@@ -22,7 +20,7 @@ O código está organizado nos seguintes pacotes:
 *   **`log`**: Utilitários de saída.
     *   `Logger`: Responsável por imprimir mensagens coloridas no terminal e salvar em arquivo.
 
-## ⚙️ Fluxo de Execução
+## Fluxo de Execução
 
 1.  **Inicialização**: O `Main` instancia o simulador, o processo e registra os dispositivos.
 2.  **Loop de Simulação (Clock)**:
@@ -39,16 +37,11 @@ O código está organizado nos seguintes pacotes:
     *   **Restauração de Contexto**: O estado antigo é recuperado.
 5.  **Retomada**: O processo continua exatamente de onde parou.
 
-## 🚀 Como Executar
+## Como Executar
 
-Compile e execute o projeto a partir da pasta raiz:
+Basta executar o arquivo Main.java a partir da pasta raiz
 
-```powershell
-javac -cp src src/Main.java src/devices/*.java src/interrupts/*.java src/log/*.java src/simulation/*.java
-java -cp src Main
-```
-
-## 🎨 Recursos Didáticos
+## Recursos Didáticos
 
 *   **Cores no Terminal**: Facilitam a distinção entre execução normal (Verde), avisos de hardware (Amarelo) e ações do Kernel (Vermelho/Ciano).
 *   **Visualização de Registradores**: É possível ver os valores de  `PC` mudando e sendo preservados durante a interrupção.

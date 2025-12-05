@@ -3,20 +3,25 @@ package interrupts;
 import java.util.PriorityQueue;
 import interrupts.Interrupt;
 
+/**
+ * Controlador de interrupções (tipo um PIC - Programmable Interrupt Controller).
+ * Gerencia a fila de interrupções baseada na prioridade.
+ */
 public class InterruptController {
 
-    private PriorityQueue<Interrupt> queue =
-        new PriorityQueue<>((a, b) -> a.getPriority().compareTo(b.getPriority()));
+    // Fila de prioridade: quem tem prioridade ALTA sai primeiro
+    private PriorityQueue<Interrupt> fila =
+        new PriorityQueue<>((a, b) -> a.getPrioridade().compareTo(b.getPrioridade()));
 
-    public void requestInterrupt(Interrupt interrupt) {
-        queue.add(interrupt);
+    public void solicitarInterrupcao(Interrupt interrupcao) {
+        fila.add(interrupcao);
     }
 
-    public Interrupt nextInterrupt() {
-        return queue.poll();
+    public Interrupt proximaInterrupcao() {
+        return fila.poll();
     }
 
-    public boolean hasInterrupts() {
-        return !queue.isEmpty();
+    public boolean temInterrupcoes() {
+        return !fila.isEmpty();
     }
 }

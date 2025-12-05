@@ -1,5 +1,9 @@
 package simulation;
 
+/**
+ * Representa o contexto do processador (registradores, PC, etc).
+ * É o que a gente salva quando ocorre uma interrupção.
+ */
 public class Contexto {
 
     private final int pc; // program counter fictício

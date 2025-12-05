@@ -4,49 +4,54 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+/**
+ * Classe simples para logar mensagens no console e em arquivo.
+ * Usa cores ANSI para ficar bonitinho no terminal.
+ */
 public class Logger {
 
+    // Cores para o terminal
     public static final String RESET = "\u001B[0m";
-    public static final String RED = "\u001B[31m";
-    public static final String GREEN = "\u001B[32m";
-    public static final String YELLOW = "\u001B[33m";
-    public static final String BLUE = "\u001B[34m";
-    public static final String CYAN = "\u001B[36m";
+    public static final String VERMELHO = "\u001B[31m";
+    public static final String VERDE = "\u001B[32m";
+    public static final String AMARELO = "\u001B[33m";
+    public static final String AZUL = "\u001B[34m";
+    public static final String CIANO = "\u001B[36m";
 
-    private PrintWriter writer;
+    private PrintWriter escritor;
 
-    public Logger(String fileName) {
+    public Logger(String nomeArquivo) {
         try {
-            writer = new PrintWriter(new FileWriter(fileName, true)); // append = true
+            escritor = new PrintWriter(new FileWriter(nomeArquivo, true)); // append = true
         } catch (IOException e) {
-            throw new RuntimeException("Erro ao criar arquivo de log: " + fileName);
+            throw new RuntimeException("Deu ruim ao criar arquivo de log: " + nomeArquivo);
         }
     }
 
-    public void log(String mensagem) {
-        writer.println(mensagem);
-        writer.flush();
+    public void registrar(String mensagem) {
+        escritor.println(mensagem);
+        escritor.flush();
         System.out.println(mensagem);
     }
 
     public void logInfo(String mensagem) {
-        log(GREEN + "[INFO] " + mensagem + RESET);
+        registrar(VERDE + "[INFO] " + mensagem + RESET);
     }
 
-    public void logWarning(String mensagem) {
-        log(YELLOW + "[WARN] " + mensagem + RESET);
+    public void logAviso(String mensagem) {
+        registrar(AMARELO + "[AVISO] " + mensagem + RESET);
     }
 
-    public void logInterrupt(String mensagem) {
-        log(RED + "[INTERRUPT] " + mensagem + RESET);
+    public void logInterrupcao(String mensagem) {
+        registrar(VERMELHO + "[INTERRUPCAO] " + mensagem + RESET);
     }
 
-    public void logSystem(String mensagem) {
-        log(CYAN + "[SYSTEM] " + mensagem + RESET);
+    public void logSistema(String mensagem) {
+        registrar(CIANO + "[SISTEMA] " + mensagem + RESET);
     }
 
-    public void close() {
-        writer.flush();
-        writer.close();
+    public void fechar() {
+        escritor.flush();
+        escritor.close();
     }
 }
